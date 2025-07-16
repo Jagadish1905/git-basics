@@ -1,8 +1,37 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Login";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<!-- Centered container -->
+<div class="d-flex align-items-center justify-content-center vh-100 bg-light">
+    <div class="card shadow-lg p-4" style="min-width: 350px; max-width: 400px;">
+        <div class="card-body">
+            <h3 class="card-title text-center mb-4">Login</h3>
+
+            <form method="post" action="/Account/Login"> <!-- Adjust this route as needed -->
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="username" name="Username" placeholder="Enter your username" required />
+                </div>
+
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" name="Password" placeholder="Enter your password" required />
+                </div>
+
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="rememberMe" name="RememberMe" />
+                    <label class="form-check-label" for="rememberMe">Remember me</label>
+                </div>
+
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+
+                <div class="text-center mt-3">
+                    <a href="#">Forgot Password?</a>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
